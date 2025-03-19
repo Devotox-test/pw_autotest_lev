@@ -1,5 +1,5 @@
 from __future__ import annotations
-from playwright.sync_api import Page, TimeoutError, Response
+from playwright.sync_api import Page, TimeoutError, Response, expect
 from data.environment import host
 
 
@@ -146,3 +146,6 @@ class Base:
 
     def switch_to_main_frame(self): #возврат на основной фрейм
         return self.page.main_frame
+
+    def init(self, page):
+        pass

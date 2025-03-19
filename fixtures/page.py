@@ -1,6 +1,7 @@
+from typing import Any, Generator
+
 import pytest
-from playwright.sync_api import Browser, BrowserContext, Page, sync_playwright
-import os
+from playwright.sync_api import Browser, Page, sync_playwright
 
 
 def pytest_addoption(parser):
@@ -15,7 +16,7 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope='class')
-def browser(request) -> Page:
+def browser(request) -> Generator[Page, Any, None]:
     playwright = sync_playwright().start()
     if request.config.getoption("bn") == 'remote_chrome':
         browser = get_remote_chrome(playwright, request)
@@ -60,7 +61,7 @@ def get_remote_chrome(playwright, request) -> Browser:
         slow_mo=request.config.getoption("slow")
     )
 
-def get_context(browser, request, start) -> BrowserContext:
+def get_context(browser, request, start) -> Any | None:
     if start == 'local':
         context = browser.new_context(
             no_viewport=True,
