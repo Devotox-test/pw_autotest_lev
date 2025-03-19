@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
-from pw_autotest_lev.data.environment import host
+from data.environment import host
 from playwright.sync_api import expect
-from pw_autotest_lev.pages.base import Base
+from pages.base import Base
 
 class Assertions(Base):
     def __init__(self, page: Page) -> None:

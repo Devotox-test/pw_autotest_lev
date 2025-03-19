@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from playwright.sync_api import Page, TimeoutError, Response
-from pw_autotest_lev.data.environment import host
+from data.environment import host
 
 
 class Base:

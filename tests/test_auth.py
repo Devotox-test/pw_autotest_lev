@@ -16,7 +16,7 @@ def run(playwright: Playwright) -> None:
 
 
 import pytest
-from pw_autotest_lev.pages.main_page import Main
+from pages.main_page import Main
 
 
 @pytest.mark.smoke

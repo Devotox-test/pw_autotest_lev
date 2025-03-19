@@ -1,7 +1,7 @@
-from pw_autotest_lev.pages.base import Base
-from pw_autotest_lev.data.constants import Constants
-from pw_autotest_lev.Locators.auth import Auth
-from pw_autotest_lev.data.assertions import Assertions
+from pages.base import Base
+from data.constants import Constants
+from Locators.auth import Auth
+from data.assertions import Assertions
 from playwright.sync_api import Page
 
 
