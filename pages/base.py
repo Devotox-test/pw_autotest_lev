@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 from __future__ import annotations
-
-=======
->>>>>>> 1c55bef61e1ce6f79a8c226e41b430883257fc92
 from playwright.sync_api import Page, TimeoutError, Response
 from data.environment import host
 
